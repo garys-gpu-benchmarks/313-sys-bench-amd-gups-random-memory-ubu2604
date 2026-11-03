@@ -102,17 +102,17 @@
   {
     "field_name": "run_benchmark Command Plus Options for Smoke Run",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
-    "value": "bash run_benchmark.sh --smoke --validate --numa-node 0 --num-threads 1 --thread-affinity node:0 --page-size 4KB --table-size 4194304 --num-updates 1000000 --num-iterations 1 --seed 42"
+    "value": "bash run_benchmark.sh --smoke --validate --numa-node 0 --num-threads 1 --thread-affinity node:0 --table-size 4194304 --num-updates 1000000 --num-iterations 1 --seed 42"
   },
   {
     "field_name": "run_benchmark Command Plus Options for Baseline Run",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
-    "value": "bash run_benchmark.sh --baseline --validate --numa-node 0 --num-threads 4 --thread-affinity node:0 --page-size 4KB --table-size 268435456 --num-updates 50000000 --num-iterations 1600 --seed 42"
+    "value": "bash run_benchmark.sh --baseline --validate --numa-node 0 --num-threads 4 --thread-affinity node:0 --table-size 268435456 --num-updates 50000000 --num-iterations 1600 --seed 42"
   },
   {
     "field_name": "run_benchmark Command Plus Options for Extended Run",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
-    "value": "bash run_benchmark.sh --extended --validate --numa-node 0 --num-threads 8 --thread-affinity node:0 --page-size 4KB --table-size 1073741824 --num-updates 200000000 --num-iterations 1900 --seed 42"
+    "value": "bash run_benchmark.sh --extended --validate --numa-node 0 --num-threads 8 --thread-affinity node:0 --table-size 1073741824 --num-updates 200000000 --num-iterations 1900 --seed 42"
   },
   {
     "field_name": "Output Fields / Metrics to Parse",
@@ -242,27 +242,27 @@
   {
     "field_name": "Parameter_04",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
-    "value": "page_size"
+    "value": "table_size"
   },
   {
     "field_name": "Parameter_05",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
-    "value": "table_size"
+    "value": "num_updates"
   },
   {
     "field_name": "Parameter_06",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
-    "value": "num_updates"
+    "value": "num_iterations"
   },
   {
     "field_name": "Parameter_07",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
-    "value": "num_iterations"
+    "value": "seed"
   },
   {
     "field_name": "Parameter_08",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
-    "value": "seed"
+    "value": "-"
   },
   {
     "field_name": "Parameter_09",
@@ -407,7 +407,7 @@
   {
     "field_name": "Profile Parameter Values",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Parameters_SmokeBaselineExtend",
-    "value": "{\"numa_node\": {\"smoke\": \"0\", \"baseline\": \"0\", \"extended\": \"0\", \"notes\": \"\"}, \"num_threads\": {\"smoke\": \"1\", \"baseline\": \"4\", \"extended\": \"8\", \"notes\": \"\"}, \"thread_affinity\": {\"smoke\": \"node:0\", \"baseline\": \"node:0\", \"extended\": \"node:0\", \"notes\": \"\"}, \"page_size\": {\"smoke\": \"4KB\", \"baseline\": \"4KB\", \"extended\": \"4KB\", \"notes\": \"\"}, \"table_size\": {\"smoke\": \"4194304\", \"baseline\": \"268435456\", \"extended\": \"1073741824\", \"notes\": \"\"}, \"num_updates\": {\"smoke\": \"1000000\", \"baseline\": \"50000000\", \"extended\": \"200000000\", \"notes\": \"\"}, \"num_iterations\": {\"smoke\": \"1\", \"baseline\": \"1600\", \"extended\": \"1900\", \"notes\": \"2026-09-06: AMD Ubuntu 26.04 sibling of 113. Same standardized num_iterations baseline=200/extended=125. | 2026-09-27 GARY_LEDGER (AggregatedRuntimeLedgers_20260927): baseline 200 iters measured 0:31/0:29 and extended 111 iters measured 0:43. Same rate as 113. Scaled to 1600 (~4:00) and 1900 (~12:16).\"}, \"seed\": {\"smoke\": \"42\", \"baseline\": \"42\", \"extended\": \"42\", \"notes\": \"\"}}"
+    "value": "{\"numa_node\": {\"smoke\": \"0\", \"baseline\": \"0\", \"extended\": \"0\", \"notes\": \"\"}, \"num_threads\": {\"smoke\": \"1\", \"baseline\": \"4\", \"extended\": \"8\", \"notes\": \"\"}, \"thread_affinity\": {\"smoke\": \"node:0\", \"baseline\": \"node:0\", \"extended\": \"node:0\", \"notes\": \"\"}, \"table_size\": {\"smoke\": \"4194304\", \"baseline\": \"268435456\", \"extended\": \"1073741824\", \"notes\": \"\"}, \"num_updates\": {\"smoke\": \"1000000\", \"baseline\": \"50000000\", \"extended\": \"200000000\", \"notes\": \"\"}, \"num_iterations\": {\"smoke\": \"1\", \"baseline\": \"1600\", \"extended\": \"1900\", \"notes\": \"2026-09-06: AMD Ubuntu 26.04 sibling of 113. Same standardized num_iterations baseline=200/extended=125. | 2026-09-27 GARY_LEDGER (AggregatedRuntimeLedgers_20260927): baseline 200 iters measured 0:31/0:29 and extended 111 iters measured 0:43. Same rate as 113. Scaled to 1600 (~4:00) and 1900 (~12:16).\"}, \"seed\": {\"smoke\": \"42\", \"baseline\": \"42\", \"extended\": \"42\", \"notes\": \"\"}}"
   },
   {
     "field_name": "Profile Command Authorship",

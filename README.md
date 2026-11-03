@@ -85,7 +85,7 @@ Three operator scripts from [`garys-gpu-benchmarks/gpu-bench-suite`](https://git
 
 ## 1. Overview
 
-Compiles an embedded C OpenMP GUPS kernel with gcc and runs it under perf stat for dTLB and LLC misses when perf is available. NumPy random updates run only if gcc fails. table_size, num_updates, num_iterations, and seed come from yaml. This is not a separate gups_benchmark.cpp binary. Sweep dimensions: numa_node, num_threads, thread_affinity, page_size, table_size, num_updates, num_iterations, seed.
+Compiles an embedded C OpenMP GUPS kernel with gcc and runs it under perf stat for dTLB and LLC misses when perf is available. NumPy random updates run only if gcc fails. table_size, num_updates, num_iterations, and seed come from yaml. This is not a separate gups_benchmark.cpp binary. Sweep dimensions: numa_node, num_threads, thread_affinity, table_size, num_updates, num_iterations, seed.
 
 ## 2. What It Validates
 
