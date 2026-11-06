@@ -19,7 +19,7 @@ Compiles an embedded C OpenMP GUPS kernel with gcc and runs it under perf stat f
 ## Invocation
 
 ```bash
-Compile an embedded C OpenMP GUPS kernel with gcc and run it under perf stat when available. NumPy is only the gcc fallback
+Compile the C OpenMP GUPS kernel with gcc and run it under perf stat when available
 ```
 
 ## Raw Output Format
@@ -48,7 +48,7 @@ Compile an embedded C OpenMP GUPS kernel with gcc and run it under perf stat for
 ## Platform Portability
 
 - **AMD (primary):** ```bash
-Compile an embedded C OpenMP GUPS kernel with gcc and run it under perf stat when available. NumPy is only the gcc fallback
+Compile the C OpenMP GUPS kernel with gcc and run it under perf stat when available
 ```
 - **NVIDIA:** Primary target is AMD ROCm. NVIDIA notes in this section are reference only and are not the execution path.
 

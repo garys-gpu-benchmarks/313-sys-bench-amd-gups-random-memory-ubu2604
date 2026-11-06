@@ -21,7 +21,7 @@ Compile an embedded C OpenMP GUPS kernel with gcc and run it under perf stat for
 Measure random 64-bit memory updates with a compiled C OpenMP kernel
 
 ## Validation Objective
-Validates GUPS throughput and TLB/L3 miss rates from the compiled C OpenMP kernel. NumPy runs only if gcc is missing or the build fails
+Validates GUPS throughput and TLB/L3 miss rates. NumPy runs only if gcc is missing or the build fails
 
 ## Workload Category
 Memory, Bandwidth & Data Movement

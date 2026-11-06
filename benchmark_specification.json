@@ -140,6 +140,16 @@
     "value": "-"
   },
   {
+    "field_name": "Validation Objective",
+    "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
+    "value": "Validates GUPS throughput and TLB/L3 miss rates. NumPy runs only if gcc is missing or the build fails"
+  },
+  {
+    "field_name": "Command Tools Executed",
+    "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
+    "value": "Compile the C OpenMP GUPS kernel with gcc and run it under perf stat when available"
+  },
+  {
     "field_name": "run_benchmark Command Plus Options for Smoke Run (One minute or less)",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
     "value": "bash run_benchmark.sh --smoke --validate --numa-node 0 --num-threads 1 --thread-affinity node:0 --table-size 4194304 --num-updates 1000000 --num-iterations 1 --seed 42"
@@ -153,16 +163,6 @@
     "field_name": "run_benchmark Command Plus Options for Extended Run (8 to 15 minutes)",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
     "value": "bash run_benchmark.sh --extended --validate --numa-node 0 --num-threads 8 --thread-affinity node:0 --table-size 1073741824 --num-updates 200000000 --num-iterations 1900 --seed 42"
-  },
-  {
-    "field_name": "Validation Objective",
-    "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
-    "value": "Validates GUPS throughput and TLB/L3 miss rates from the compiled C OpenMP kernel. NumPy runs only if gcc is missing or the build fails"
-  },
-  {
-    "field_name": "Command Tools Executed",
-    "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
-    "value": "Compile an embedded C OpenMP GUPS kernel with gcc and run it under perf stat when available. NumPy is only the gcc fallback"
   },
   {
     "field_name": "Command Execution Details and Purpose",
@@ -377,7 +377,7 @@
   {
     "field_name": "Workload Command Line Executable",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
-    "value": "Compile an embedded C OpenMP GUPS kernel with gcc and run it under perf stat when available. NumPy is only the gcc fallback"
+    "value": "Compile the C OpenMP GUPS kernel with gcc and run it under perf stat when available"
   },
   {
     "field_name": "ROCm Version",
@@ -412,7 +412,7 @@
   {
     "field_name": "Profile Parameter Values",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Parameters_SmokeBaselineExtend",
-    "value": "{\"numa_node\": {\"smoke\": \"0\", \"baseline\": \"0\", \"extended\": \"0\", \"notes\": \"\"}, \"num_threads\": {\"smoke\": \"1\", \"baseline\": \"4\", \"extended\": \"8\", \"notes\": \"\"}, \"thread_affinity\": {\"smoke\": \"node:0\", \"baseline\": \"node:0\", \"extended\": \"node:0\", \"notes\": \"\"}, \"table_size\": {\"smoke\": \"4194304\", \"baseline\": \"268435456\", \"extended\": \"1073741824\", \"notes\": \"\"}, \"num_updates\": {\"smoke\": \"1000000\", \"baseline\": \"50000000\", \"extended\": \"200000000\", \"notes\": \"\"}, \"num_iterations\": {\"smoke\": \"1\", \"baseline\": \"1600\", \"extended\": \"1900\", \"notes\": \"2026-09-06: AMD Ubuntu 26.04 sibling of 113. Same standardized num_iterations baseline=200/extended=125. | 2026-09-27 GARY_LEDGER (AggregatedRuntimeLedgers_20260927): baseline 200 iters measured 0:31/0:29 and extended 111 iters measured 0:43. Same rate as 113. Scaled to 1600 (~4:00) and 1900 (~12:16).\"}, \"seed\": {\"smoke\": \"42\", \"baseline\": \"42\", \"extended\": \"42\", \"notes\": \"\"}}"
+    "value": "{\"numa_node\": {\"smoke\": \"0\", \"baseline\": \"0\", \"extended\": \"0\"}, \"num_threads\": {\"smoke\": \"1\", \"baseline\": \"4\", \"extended\": \"8\"}, \"thread_affinity\": {\"smoke\": \"node:0\", \"baseline\": \"node:0\", \"extended\": \"node:0\"}, \"table_size\": {\"smoke\": \"4194304\", \"baseline\": \"268435456\", \"extended\": \"1073741824\"}, \"num_updates\": {\"smoke\": \"1000000\", \"baseline\": \"50000000\", \"extended\": \"200000000\"}, \"num_iterations\": {\"smoke\": \"1\", \"baseline\": \"1600\", \"extended\": \"1900\"}, \"seed\": {\"smoke\": \"42\", \"baseline\": \"42\", \"extended\": \"42\"}}"
   },
   {
     "field_name": "Profile Command Authorship",
