@@ -16,12 +16,11 @@ capture_benchmark_run_command_submitted "$@"
 
 usage() {
   cat <<'USAGE'
+
 Usage: bash run_benchmark.sh [OPTIONS]
 
 Workload Name:          GUPS Random Memory.
 Main Goal:              Measure random 64-bit memory updates with a compiled C OpenMP kernel.
-Validation Objective:   Validates GUPS throughput and TLB/L3 miss rates. NumPy runs only if gcc is
-                        missing or the build fails.
 Command Tools Executed: Compile the C OpenMP GUPS kernel with gcc and run it under perf stat when
                         available.
 
