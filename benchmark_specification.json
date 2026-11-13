@@ -40,6 +40,11 @@
     "value": "Compile the C OpenMP GUPS kernel with gcc and run it under perf stat when available"
   },
   {
+    "field_name": "Execution Description With Parameters",
+    "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
+    "value": "Compiles an embedded C OpenMP GUPS kernel with gcc and runs it under perf stat for dTLB and LLC misses when perf is available. NumPy random updates run only if gcc fails. table_size, num_updates, num_iterations, and seed come from yaml. This is not a separate gups_benchmark.cpp binary. output_format: csv"
+  },
+  {
     "field_name": "Metrics",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
     "value": "#1: Giga-updates score (giga_updates_score); #2: Random 64-bit update rate (updates_sec); #3: 8-byte payload update rate, GB/s (payload_update_gb_s); #4: TLB miss rate (tlb_miss_rate); #5: L3 cache miss rate (l3_miss_rate)"
@@ -173,11 +178,6 @@
     "field_name": "Command Methodology",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
     "value": "Compile an embedded C OpenMP GUPS kernel with gcc and run it under perf stat for dTLB and LLC misses when perf is available. NumPy random updates run only if gcc fails. Derive gups from the elapsed update count. This is not a separate gups_benchmark.cpp binary"
-  },
-  {
-    "field_name": "Execution Description With Parameters",
-    "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
-    "value": "Compiles an embedded C OpenMP GUPS kernel with gcc and runs it under perf stat for dTLB and LLC misses when perf is available. NumPy random updates run only if gcc fails. table_size, num_updates, num_iterations, and seed come from yaml. This is not a separate gups_benchmark.cpp binary. output_format: csv"
   },
   {
     "field_name": "Execution Domain",
