@@ -11,16 +11,16 @@ Reference results from the validation run on the system shown in each section (r
 ## smoke
 
 - **System:** 1× AMD Instinct MI300X VF (196288 MB) · INTEL(R) XEON(R) PLATINUM 8568Y+ · Ubuntu 26.04.1 LTS · kernel 7.0.0-43-generic · driver 7.1.9.31600000
-- **Run:** 2026-11-22T10:57:17Z · status **N/A-EXPECTED** (exit 0)
+- **Run:** 2026-11-22T14:26:51Z · status **N/A-EXPECTED** (exit 0)
 - **Time (mm:ss):** setup 00:06 · benchmark 00:01 · whole run 00:12
-- **Source:** run 313_20261122_105717
+- **Source:** run 313_20261122_142651
 - **Command:** `bash run_benchmark.sh --smoke --numa-node 0 --num-threads 1 --thread-affinity node:0 --table-size 4194304 --num-updates 1000000 --num-iterations 1 --seed 42`
 
 | # | Metric | Result |
 |---|---|---|
-| 1 | Giga-updates score (giga_updates_score) | 0.011475075648001825 |
-| 2 | Random 64-bit update rate (updates_sec) | 11475075.648001825 |
-| 3 | 8-byte payload update rate, GB/s (payload_update_gb_s) | 0.0918006051840146 |
-| 4 | TLB miss rate (tlb_miss_rate) | 0.013164581696960593 |
+| 1 | Giga-updates score (giga_updates_score) | 0.011338683786083575 |
+| 2 | Random 64-bit update rate (updates_sec) | 11338683.786083575 |
+| 3 | 8-byte payload update rate, GB/s (payload_update_gb_s) | 0.0907094702886686 |
+| 4 | TLB miss rate (tlb_miss_rate) | 0.013215141936585692 |
 | 5 | L3 cache miss rate (l3_miss_rate) | na (expected: LLC load counters not exposed on this host) |
 <!-- /profile:smoke -->
